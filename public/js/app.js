@@ -1,4 +1,4 @@
-var diversityApp = angular.module('diversityApp', ['ngRoute', 'diversityAppControllers']);
+var diversityApp = angular.module('diversityApp', ['ngRoute', 'diversityAppControllers', 'ezfb']);
 
 var diversityAppControllers = angular.module('diversityAppControllers', []);
 
