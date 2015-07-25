@@ -9,7 +9,7 @@ diversityApp.config(function (ezfbProvider) {
 
 var diversityAppControllers = angular.module('diversityAppControllers', []);
 
-diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams', 'ezfb', function ($scope, $routeParams, ezfb) {
+diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams', '$locaton','ezfb', function ($scope, $routeParams, $location, ezfb) {
   $scope.company = $routeParams.company;
 
   updateLoginStatus(updateApiMe);
@@ -18,6 +18,7 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
 	  ezfb.login(function (res) {
 		  if (res.authResponse) {
 			  updateLoginStatus(updateApiMe);
+			  $location.path('/dashboard');
 		  }
 	  }, {scope: 'email,user_likes'});
   };
