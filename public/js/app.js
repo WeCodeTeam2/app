@@ -22,6 +22,23 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
 	  }, {scope: 'email,user_likes'});
   };
 
+  $scope.api = function () {
+	  ezfb.ui(
+		  {
+			  method: 'feed',
+		  name: 'angular-easyfb API demo',
+		  picture: 'http://plnkr.co/img/plunker.png',
+		  link: 'http://plnkr.co/edit/qclqht?p=preview',
+		  description: 'angular-easyfb is an AngularJS module wrapping Facebook SDK.' + 
+		  ' Facebook integration in AngularJS made easy!' + 
+		  ' Please try it and feel free to give feedbacks.'
+		  },
+		  function (res) {
+			  // res: FB.ui response
+		  }
+		  );
+  };
+
   function updateLoginStatus (more) {
 	  ezfb.getLoginStatus(function (res) {
 		  $scope.loginStatus = res;
@@ -31,7 +48,7 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
   }
 
   function updateApiMe () {
-	  ezfb.api('/me', function (res) {
+	  ezfb.api('/index.html', function (res) {
 		  $scope.apiMe = res;
 	  });
   }
