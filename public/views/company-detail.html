@@ -1,3 +1,37 @@
-<div>
-	<p>This is the company detail view for {{company}}!</p>
+<div class="col-md-12">
+	<div class="row" id="company-header">
+		<div class="col-md-8">
+			<select ng-model="currentCompany.name">
+				<option value="nike">Nike</option>
+				<option value="crowd-compass">Crowd Compass</option>
+				<option value="puppet-labs">Puppet Labs</option>
+				<option value="jama">Jama</option>
+				<option value="new-relic">New Relic</option>
+			</select>
+		</div>
+		<div class="col-md-4">{{currentCompany}} logo here</div>
+	</div>
+
+	<div class="row" id="company-metrics">
+		<div class="col-md-6"><!-- supportive culture overall rating --></div>
+		<div class="col-md-6">
+			<svg id="ratio-chart"></svg>
+		<!-- basic ratio bars based on category selection -->
+		<br/>
+		<select ng-model="ratioChartDataSelection">
+			<option value="Gender">Gender</option>
+			<option value="Ethnicity">Ethnicity</option>
+		</select>
+		</div>
+	</div>
+
+
+	<div class="row" id="fb-comments">
+		<div class="col-md-6">
+			<h4><!-- question/discussion prompt --></h4>
+			<div><!-- import facebook comments here --></div>
+		</div>
+
+	</div>
+
 </div>
