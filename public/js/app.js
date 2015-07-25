@@ -167,6 +167,10 @@ diversityAppControllers.config(['$routeProvider',
         templateUrl: 'views/dashboard.html',
         controller: 'DivAppController'
       }).
+	  when('/selectedCompany',{
+		  templateUrl: 'views/selected.html',
+	  	  controller:'DivAppController'
+	  }),
       when('/company/:company', {
         templateUrl: 'views/company-detail.html',
         controller: 'DivAppController'
