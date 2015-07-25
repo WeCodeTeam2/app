@@ -10,23 +10,15 @@
   <script src="js/app.js"></script>
 </head>
 <body ng-controller="DivAppController">
-	<a href="https://github.com/pc035860/angular-easyfb"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 	<div class="container">
-		<h2>angular-easyfb API demo (promise version)</h2>
-
 		<div>
 			<button class="btn btn-primary" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">Connect with Facebook</button>
 			&nbsp; 
 			<button class="btn btn-danger" ng-click="logout()" ng-disabled="!loginStatus || loginStatus.status != 'connected'">Logout</button>
 			&nbsp;
-			<button class="btn btn-success" ng-click="share()">FB.ui</button>
 		</div>
 
 		<br>
-
-		<h4>
-			Hello, <span ng-show="me.name">{{ me.name }}</span><span ng-show="me.error">unkown</span>!
-		</h4>
 
 		<div class="row">
 			<div class="col-md-6">
@@ -34,8 +26,8 @@
 				<div class="code-block" hljs source="loginStatusJSON"></div>
 			</div>
 			<div class="col-md-6">
-				<h4 class="text-info">$FB.api('/me') & $FB.api('/me/likes')</h4>
-				<div class="code-block" hljs source="apiResJSON"></div>
+				<h4 class="text-info">$FB.api('/me')</h4>
+				<div class="code-block" hljs source="apiMeJSON"></div>
 			</div>
 		</div>
 
