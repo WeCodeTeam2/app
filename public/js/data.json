@@ -1,31 +1,6 @@
-var diversityApp = angular.module('diversityApp', ['ngRoute', 'diversityAppControllers']);
-
-var diversityAppControllers = angular.module('diversityAppControllers', []);
-
-diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams', '$http', function ($scope, $routeParams, $http) {
-
-  $scope.currentCompany.data = {};
-  $scope.currentCompany.name = $routeParams.company;
-
-  $scope.data = {};
-
-  // this will inform which ratio chart to build
-  $scope.ratioChartDataSelection = '';
-  $scope.ratioChartData = function(){
-    for (var i=0; i < $scope.data.companies.length; i++) {
-
-      // format properly
-      var thisCompany = $scope.currentCompany.replace(/-/g, ' ').replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-
-      if ($scope.data.companies[i]["Company"] = thisCompany) {
-        $scope.currentCompany.data = $scope.data.companies[i];
-      }
-    }
-  };
-
-  $scope.data.companies = [
-    {
-      "Company":"Crowd Compass",
+[
+   {
+      "Company":"CrowdCompass",
       "Total Employees":620,
       "Metric":{
          "Gender":{
@@ -114,30 +89,4 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
          }
       }
    }
-  ];
-
-
-
-
-
-}]);
-
-diversityAppControllers.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/login', {
-        templateUrl: 'views/login.html',
-        controller: 'DivAppController'
-      }).
-      when('/dashboard', {
-        templateUrl: 'views/dashboard.html',
-        controller: 'DivAppController'
-      }).
-      when('/company/:company', {
-        templateUrl: 'views/company-detail.html',
-        controller: 'DivAppController'
-      }).
-      otherwise({
-        redirectTo: '/index.html'
-      });
-  }]);
+]
