@@ -170,7 +170,7 @@ diversityAppControllers.config(['$routeProvider',
 	  when('/selectedCompany',{
 		  templateUrl: 'views/selected.html',
 	  	  controller:'DivAppController'
-	  }),
+	  }).
       when('/company/:company', {
         templateUrl: 'views/company-detail.html',
         controller: 'DivAppController'
