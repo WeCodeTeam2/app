@@ -135,6 +135,10 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
 	  }, {scope: 'email,user_likes'});
   };
 
+  $scope.selected = function() {
+	$location.path('/selectedCompany');
+  };
+
   $scope.logout = function () {
 	  ezfb.logout(function () {
 		  updateLoginStatus(updateApiMe);
