@@ -10,6 +10,7 @@ diversityApp.config(function (ezfbProvider) {
 var diversityAppControllers = angular.module('diversityAppControllers', []);
 
 diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams', '$http', '$location','ezfb', function ($scope, $routeParams, $http, $location, ezfb) {
+  $scope.currentCompany = {};
   $scope.currentCompany.data = {};
   $scope.currentCompany.name = $routeParams.company;
 
