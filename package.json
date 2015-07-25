@@ -1,0 +1,27 @@
+{
+  "name": "wecode-group2-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "~4.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WeCodeTeam2/app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeCodeTeam2/app/issues"
+  },
+  "homepage": "https://github.com/WeCodeTeam2/app"
+}

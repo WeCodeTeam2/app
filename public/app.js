@@ -1,6 +1,2 @@
-var diversityApp = angular.module('diversityApp', []);
+var diversityApp = angular.module('diversityApp', ['ngRoute', 'diversityAppControllers']);
 
-diversityApp.controller('DivAppController', function ($scope) {
-  
-  
-});
