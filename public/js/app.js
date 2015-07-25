@@ -18,7 +18,7 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
 	  ezfb.login(function (res) {
 		  if (res.authResponse) {
 			  updateLoginStatus(updateApiMe);
-			  $locaton.path('/dashboard');
+			  $location.path('/dashboard');
 		  }
 	  }, {scope: 'email,user_likes'});
   };
