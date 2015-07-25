@@ -1,3 +1,5 @@
+var diversityApp = angular.module('diversityApp', ['ngRoute', 'diversityAppControllers']);
+
 var diversityAppControllers = angular.module('diversityAppControllers', []);
 
 diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams', function ($scope, $routeParams) {
@@ -8,18 +10,18 @@ diversityAppControllers.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/login', {
-        templateUrl: 'partials/login.html',
+        templateUrl: 'views/login.html',
         controller: 'DivAppController'
       }).
       when('/dashboard', {
-        templateUrl: 'partials/dashboard.html',
+        templateUrl: 'views/dashboard.html',
         controller: 'DivAppController'
       }).
       when('/company/:company', {
-        templateUrl: 'partials/company-detail.html',
+        templateUrl: 'views/company-detail.html',
         controller: 'DivAppController'
       }).
       otherwise({
-        redirectTo: '/partials/dashboard.html'
+        redirectTo: '/index.html'
       });
   }]);
