@@ -3,7 +3,7 @@ var diversityApp = angular.module('diversityApp', ['ngRoute', 'diversityAppContr
 diversityApp.config(function (ezfbProvider) {
 	ezfbProvider.setInitParams({
 		appId: '1458271304475494',
-		version: 'v2.3'
+		version: 'v2.4'
 	});
 });
 
@@ -22,10 +22,16 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
 	  }, {scope: 'email,user_likes'});
   };
 
-  $scope.api = function () {
+  $scope.logout = function () {
+	  ezfb.logout(function () {
+		  updateLoginStatus(updateApiMe);
+	  });
+  };
+
+/*  $scope.api = function () {
 	  ezfb.ui(
 		  {
-			  method: 'feed',
+		  method: 'feed',
 		  name: 'angular-easyfb API demo',
 		  picture: 'http://plnkr.co/img/plunker.png',
 		  link: 'http://plnkr.co/edit/qclqht?p=preview',
@@ -37,7 +43,7 @@ diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams'
 			  // res: FB.ui response
 		  }
 		  );
-  };
+  };*/
 
   function updateLoginStatus (more) {
 	  ezfb.getLoginStatus(function (res) {
