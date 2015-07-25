@@ -1,5 +1,12 @@
 var diversityApp = angular.module('diversityApp', ['ngRoute', 'diversityAppControllers', 'ezfb']);
 
+diversityApp.config(function (ezfbProvider) {
+	ezfbProvider.setInitParams({
+		appId: '1458271304475494',
+		version: 'v2.3'
+	});
+});
+
 var diversityAppControllers = angular.module('diversityAppControllers', []);
 
 diversityAppControllers.controller('DivAppController', ['$scope', '$routeParams', function ($scope, $routeParams) {
