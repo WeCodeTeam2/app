@@ -12,12 +12,10 @@
 <body ng-controller="DivAppController">
 	<div class="container">
 		<div>
-			<button class="btn btn-primary" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">Connect with Facebook</button>
+			<button class="btn btn-primary" ng-href="/dashboard" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">Connect with Facebook</button>
         	<button class="btn btn-danger" ng-click="logout()" ng-disabled="!loginStatus || loginStatus.status != 'connected'">Logout</button>
 		</div>
 	</div>
-
-	<p>the index shell is loading!</p>
 
 	<div ng-view></div>
 
